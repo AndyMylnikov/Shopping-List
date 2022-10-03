@@ -1,8 +1,9 @@
 package com.andymylnikov.shoppinglist.domain
 
-class GetShopItemUseCase {
+class GetShopItemUseCase(private  val shopListRepository: ShopListRepository) {
 
-    fun getShopItem(shopItem: Int):ShopItem{
-        TODO()
+    fun getShopItem(shopItemId: Int): ShopItem {
+        return shopListRepository.getShopItem(shopItemId)
+
     }
 }
